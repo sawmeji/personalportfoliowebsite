@@ -1,6 +1,6 @@
 # Personal Portfolio Website
 
-Hi, I'm Min Khant San.
+Hi, I'm Meji.
 
 This is my personal portfolio website where I showcase my projects, technical skills, and work experience. I created this website to share my journey as a software developer and entrepreneur, and to have a place where people can learn more about me and my work.
 

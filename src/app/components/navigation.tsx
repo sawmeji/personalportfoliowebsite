@@ -1,21 +1,21 @@
-import { useState, useEffect } from "react"
-import { Moon, Sun, Menu, X } from "lucide-react"
-import { useTheme } from "next-themes"
-import { Button } from "./ui/button"
-import { motion, AnimatePresence } from "motion/react"
+import { useState, useEffect } from "react";
+import { Moon, Sun, Menu, X } from "lucide-react";
+import { useTheme } from "next-themes";
+import { Button } from "./ui/button";
+import { motion, AnimatePresence } from "motion/react";
 
 export function Navigation() {
-  const [scrolled, setScrolled] = useState(false)
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const { theme, setTheme } = useTheme()
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navItems = [
     { name: "About", href: "#about" },
@@ -24,7 +24,7 @@ export function Navigation() {
     { name: "Projects", href: "#projects" },
     { name: "Coffee", href: "#coffee" },
     { name: "Contact", href: "#contact" },
-  ]
+  ];
 
   return (
     <motion.nav
@@ -43,7 +43,7 @@ export function Navigation() {
             className="text-xl font-semibold tracking-tight text-foreground"
             whileHover={{ scale: 1.05 }}
           >
-            Min Khant San
+            Meji
           </motion.a>
 
           <div className="hidden md:flex items-center gap-8">
@@ -120,5 +120,5 @@ export function Navigation() {
         )}
       </AnimatePresence>
     </motion.nav>
-  )
+  );
 }

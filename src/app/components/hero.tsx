@@ -1,6 +1,6 @@
-import { motion } from "motion/react"
-import { Button } from "./ui/button"
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react"
+import { motion } from "motion/react";
+import { Button } from "./ui/button";
+import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 
 export function Hero() {
   return (
@@ -36,7 +36,7 @@ export function Hero() {
                 transition={{ delay: 0.3 }}
                 className="text-5xl lg:text-7xl font-bold tracking-tight"
               >
-                Min Khant San
+                Meji
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -54,8 +54,9 @@ export function Hero() {
               transition={{ delay: 0.5 }}
               className="text-lg text-muted-foreground max-w-2xl"
             >
-              Passionate about building elegant solutions and brewing exceptional coffee.
-              3 years of experience crafting enterprise applications with Java and modern web technologies.
+              Passionate about building elegant solutions and brewing
+              exceptional coffee. 3 years of experience crafting enterprise
+              applications with Java and modern web technologies.
             </motion.p>
 
             <motion.div
@@ -79,12 +80,20 @@ export function Hero() {
               className="flex gap-4"
             >
               <Button variant="ghost" size="icon" asChild>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://github.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Github className="h-5 w-5" />
                 </a>
               </Button>
               <Button variant="ghost" size="icon" asChild>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Linkedin className="h-5 w-5" />
                 </a>
               </Button>
@@ -106,7 +115,9 @@ export function Hero() {
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-accent/20 to-primary/20 rounded-3xl blur-2xl" />
               <div className="relative bg-gradient-to-br from-secondary to-background rounded-3xl p-8 shadow-2xl border border-border">
                 <div className="w-full h-full bg-muted rounded-2xl flex items-center justify-center">
-                  <span className="text-muted-foreground">Professional Portrait</span>
+                  <span className="text-muted-foreground">
+                    Professional Portrait
+                  </span>
                 </div>
               </div>
             </div>
@@ -116,12 +127,17 @@ export function Hero() {
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.2, duration: 1, repeat: Infinity, repeatType: "reverse" }}
+          transition={{
+            delay: 1.2,
+            duration: 1,
+            repeat: Infinity,
+            repeatType: "reverse",
+          }}
           className="absolute bottom-8 left-1/2 -translate-x-1/2"
         >
           <ArrowDown className="h-6 w-6 text-muted-foreground" />
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
